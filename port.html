@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="port.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<svg width="0" height="0" style="position: absolute;">
+    <defs>
+        <clipPath id="wave" clipPathUnits="objectBoundingBox">
+            <path d="M0.3,0 C0.4,0.2 0.2,0.4 0.3,0.6 C0.4,0.8 0.2,1 0.3,1 L1,1 L1,0 Z"></path>
+        </clipPath>
+    </defs>
+</svg>
+</head>
+
+<body>
+
+    
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
+        // Show the button with fade in effect when scrolled down 2000px from the top
+        window.onscroll = function() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        };
+  
+        // Scroll to the top of the document when the button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+
+    <header>
+    <div class="logo">
+        <a href="port.html">
+        <img src="image/logo.png" alt="Logo" class="logoimg">
+        </a>
+    </div>
+    <nav>
+        <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="#work-section">Work</a></li>
+        </ul>
+        <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        </div>
+    </nav>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+    </header>
+
+<div class="html_container">
+        <div class="main">
+            <h3 data-aos="fade-up"
+            data-aos-duration="3000" class="mainen">constantly challenging</h3>
+            <h2 data-aos="fade-up"
+            data-aos-duration="3000" class="mainkr">끈임없이 앞으로 나아가는 디자이너 양성우입니다</h2>
+        </div>
+
+        <div data-aos="zoom-in"
+        data-aos-duration="2000" class="more">
+            <h2 class="morettx">MORE ABOUT ME</h2>
+            <div id="drop1" class="drop1">
+                <img src="image/waterdrop.png" class="waterdrop" alt="Water Drop">
+            </div>
+        </div>
+        
+        <div class="text-wraper">
+            <h1 class="scrollttx">MY WORKS <img class="waterdrop" src="image/raindrop.png" alt=""></h1>
+            <h1 class="scrollttx">MY WORKS <img class="waterdrop" src="image/raindrop.png" alt=""></h1>
+            <h1 class="scrollttx">MY WORKS <img class="waterdrop" src="image/raindrop.png" alt=""></h1>
+            <h1 class="scrollttx">MY WORKS <img class="waterdrop" src="image/raindrop.png" alt=""></h1>
+            <h1 class="scrollttx">MY WORKS <img class="waterdrop" src="image/raindrop.png" alt=""></h1>
+            <h1 class="scrollttx">MY WORKS <img class="waterdrop" src="image/raindrop.png" alt=""></h1>
+        </div>
+        
+        <div class="ui_container">
+            <div class="ui_wrap">
+            <div class="background"></div>
+            <div class="watertext">
+                <h2 class="waterani">APP UI DESIGN</h2>
+            </div>
+            <div  class="image-container">
+                <img src="image/ui1.png" alt="대체 텍스트">
+                <div class="overlay">Project Ghulam</div>
+                <div class="overlay2"><button class="ui">UI UX DESIGN</button> <button class="ui">BRANDING</button></div>
+                <script src="click.js"></script>
+            </div>
+            
+        
+            <div class="image-container">
+                <img src="image/ui2.png" alt="대체 텍스트">
+                <div class="overlay">SLEEP</div>
+                <div class="overlay2"><button class="ui">UI UX DESIGN</button> <button class="ui">BRANDING</button></div>
+            </div>
+        
+            <div class="image-container">
+                <img src="image/ui3.png" alt="대체 텍스트">
+                <div class="overlay">SPACE EXPLORER</div>
+                <div class="overlay2"><button class="ui">UI UX DESIGN</button> <button class="ui">BRANDING</button></div>
+            </div>
+        </div>
+            </div>
+
+            <div class="text-wraper2">
+                <h1 class="scrollttx2">MY WORKS <img class="waterdrop2" src="image/raindrop.png" alt=""></h1>
+                <h1 class="scrollttx2">MY WORKS <img class="waterdrop2" src="image/raindrop.png" alt=""></h1>
+                <h1 class="scrollttx2">MY WORKS <img class="waterdrop2" src="image/raindrop.png" alt=""></h1>
+                <h1 class="scrollttx2">MY WORKS <img class="waterdrop2" src="image/raindrop.png" alt=""></h1>
+                <h1 class="scrollttx2">MY WORKS <img class="waterdrop2" src="image/raindrop.png" alt=""></h1>
+                <h1 class="scrollttx2">MY WORKS <img class="waterdrop2" src="image/raindrop.png" alt=""></h1>
+            </div>
+            
+            <div class="web_container">
+                <h2 class="webwater">Website design</h2>
+            <div class="background2"></div>
+            <div class="artical_container">
+            <div class="artical_web">
+                <div class="artical_hover" data-link="hanwa.html">
+                <div class="artical">
+                    <div class="date_div">
+                <h3 class="date">2023</h3>
+            </div>
+                <div class="artical_text">
+                    <h2 class="artttx">Hanwha</h2>
+                    <h1 class="artttx2">Promotion & Coporation</h1>
+                </div>
+                <img class="web1" src="image/web1.png" alt="">
+                <div class="artbtt">
+                    <button class="webbtn">Layout Design</button>
+                    <button class="webbtn">Art Direction</button>
+                </div>
+                <div class="view_container">
+                    <span class="view_text">View</span>
+                </div>
+            </div>
+            </div>
+            
+                <div class="artical_hover" data-link="card2.html">
+                <div class="artical2">
+                    <div class="date_div">
+                <h3 class="date">2023</h3>
+            </div>
+                <div class="artical_text">
+                    <h2 class="artttx">ETUDE</h2>
+                    <h1 class="artttx2">beauty & Makeup</h1>
+                </div>
+                <img class="web1" src="image/web2.png" alt="">
+                <div class="artbtt">
+                    <button class="webbtn2">Layout Design</button>
+                    <button class="webbtn2">Art Direction</button>
+                </div>
+                <div class="view_container">
+                    <span class="view_text">View</span>
+                </div>
+                <script src="card3.js"></script>
+            </div>
+            </div>
+            
+                <div class="artical_hover" data-link="card2.html">
+                <div class="artical3">
+                    <div class="date_div">
+                <h3 class="date">2023</h3>
+            </div>
+                <div class="artical_text">
+                    <h2 class="artttx">DIVE PALAU</h2>
+                    <h1 class="artttx2">CONCEPT DESIGN</h1>
+                </div>
+                <img class="web1" src="image/web3.png" alt="">
+                <div class="artbtt">
+                    <button class="webbtn3">Layout Design</button>
+                    <button class="webbtn3">Art Direction</button>
+                </div>
+                <div class="view_container">
+                    <span class="view_text">View</span>
+                </div>
+                <script src="card3.js"></script>
+            </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+    </div>
+
+        <div id="drop3" class="more1">
+            <div id="drop2" class="drop2"></div>
+        </div>
+
+
+
+
+                    <div id="work-section" class="last">
+                        <div class="last_wrap">
+                            <h4 data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500" class="contact"><span class="wave-text">MY DESIGN</span></h4>
+                            <section class="hero-section">
+                                <div class="card1-grid">
+                                    <a data-aos="fade-up"
+                                    data-aos-duration="2000"
+                                    data-aos-delay="500" class="card1" href="#">
+                                        <div class="card1__background" style="background-image: url(image/post1.png)"></div>
+                                        <div class="card1__content">
+                                        <p class="card1__category">Artwork</p>
+                                        <h3 class="card1__heading">NEW YORK</h3>
+                                        </div>
+                                    </a>
+                                    <a data-aos="fade-up"
+                                    data-aos-duration="2000"
+                                    data-aos-delay="800" class="card1" href="#">
+                                        <div class="card1__background" style="background-image: url(image/post2.png)"></div>
+                                        <div class="card1__content">
+                                        <p class="card1__category">POSTER</p>
+                                        <h3 class="card1__heading">NIKE</h3>
+                                        </div>
+                                    </a>
+                                    <a data-aos="fade-up"
+                                    data-aos-duration="2000"
+                                    data-aos-delay="1100" class="card1" href="#">
+                                        <div class="card1__background" style="background-image: url(image/post3.png)"></div>
+                                        <div class="card1__content">
+                                        <p class="card1__category">CONCEPT</p>
+                                        <h3 class="card1__heading">跳躍</h3>
+                                        </div>
+                                    </a>
+                                    <a data-aos="fade-up"
+                                    data-aos-duration="2000"
+                                    data-aos-delay="1400" class="card1" href="#">
+                                        <div class="card1__background" style="background-image: url(image/bookcover.jpg)"></div>
+                                        <div class="card1__content">
+                                        <p class="card1__category">Bookcover</p>
+                                        <h3 class="card1__heading">ALKI</h3>
+                                        </div>
+                                    </a>
+                                    <div>
+                                </section>
+                        </div>
+                    </div>
+
+
+
+
+                        <h4 data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000" class="contact">
+                            <span class="wave-text2">My video Product</span></h4>
+
+                        <div data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        data-aos-duration="1000" class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <!-- 각 슬라이드 항목 -->
+                                <div class="swiper-slide">
+                                    <img src="image/vd1.png" alt="Image 1" class="Image1">
+                                    <div class="info-bar">
+                                        <span class="left-text">2023~2024</span>
+                                        <span class="right-text">SONY</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/vd2.png" alt="Image 2" class="Image2">
+                                    <div class="info-bar">
+                                        <span class="left-text">2023~2024</span>
+                                        <span class="right-text">SONY</span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="image/vd3.png" alt="Image 3" class="Image3">
+                                    <div class="info-bar">
+                                        <span class="left-text">2023~2024</span>
+                                        <span class="right-text">SONY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+        <div id="contact-section" class="footer">
+            <div class="footer_background"></div>
+            <div class="container">
+                <div class="text">GET IN T<span class="wave"><button class="won"></button></span>UCH</div>
+            </div>
+            
+            
+    
+            <div class="footerwrap">
+            <div class="footer-container1">
+                <div class="navigation-title">NAVIGATION</div>
+                <ul class="navigation-links">
+                    <li>About</li>
+                    <li>Work</li>
+                    <li>Projects</li>
+                </ul>
+            </div>
+    
+            <div class="footer-container">
+                <div class="navigation-title">SOCIALS</div>
+                <ul class="navigation-links">
+                    <li>INSTAGRAM</li>
+                    <li>Behance</li>
+                    <li>Pinterest</li>
+                </ul>
+            </div>
+    
+            <div class="footer-container">
+                <div class="navigation-title">CONTACT</div>
+                <ul class="navigation-links">
+                    <li><img class="icons1" src="image/email.png" alt=""><h2 class="iconttx">ysofun0907@hanmail.net</h2></li>
+                    <li><img class="icons2" src="image/phone.png" alt=""><h2 class="iconttx2">010 - 9199 - 7197</h2></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+        <script>
+            AOS.init();
+        </script>
+
+        <script>
+            includeHTML();
+        </script>
+
+            <script src="port.js"></script>
+</body>
+</html>

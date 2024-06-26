@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hanwa.css">
+    <link rel="stylesheet" href="hanwa.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="ttx">
+                <h1>2024</h1>
+                <h2 class="title">HANWHA SITE REDESIGN</h2>
+            </div>
+            <div class="siteimg">
+                <img class="site" src="image/hanwa.png" alt="">
+            </div>
+            <a href="port.html"><button class="close-btn"><i class="fa-solid fa-arrow-left"></i></button></a>
+        </div>
+        <button class="slide-btn left-slide-btn"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="slide-btn right-slide-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const titles = [
+        { text: "HANWHA SITE REDESIGN", color: "#FF9900" },
+        { text: "EDDUE SITE REDESIGN", color: "#f2c6cf" },
+        { text: "DIVE PALAU SITE DESIGN", color: "#0075ff" }
+    ];
+    const images = [
+        "image/hanwa.png",
+        "image/ETUDE.png",
+        "image/DIVE.png"
+    ];
+
+    let currentIndex = 0;
+
+    const titleElement = document.querySelector('.title');
+    const siteImgElement = document.querySelector('.siteimg img');
+
+    document.querySelector('.left-slide-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : titles.length - 1;
+        slideContent();
+    });
+
+    document.querySelector('.right-slide-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex < titles.length - 1) ? currentIndex + 1 : 0;
+        slideContent();
+    });
+
+    function slideContent() {
+        titleElement.style.opacity = '0';
+        siteImgElement.style.opacity = '0';
+
+        setTimeout(() => {
+            titleElement.textContent = titles[currentIndex].text;
+            titleElement.style.color = titles[currentIndex].color;
+            siteImgElement.src = images[currentIndex];
+            titleElement.style.opacity = '1';
+            siteImgElement.style.opacity = '1';
+        }, 500);
+    }
+});
+
+
+</script>
+</body>
+</html>

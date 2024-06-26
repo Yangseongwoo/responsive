@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Noto+Sans+KR:wght@100..900&family=Oleo+Script:wght@400;700&display=swap');
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #0008ff #000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0008ff;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #141414;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 전체 스타일링 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-right: 50px;
+    background-color: #141414;
+    color: #fff;
+    }
+    
+    
+    .logoimg {
+        height: 100px;
+    }
+    
+    .nav-links {
+        display: flex;
+        list-style: none;
+    }
+    
+    .nav-links li {
+        margin-left: 30px;
+    }
+    
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    /* 햄버거 바 스타일링 */
+    .burger {
+        display: none;
+        cursor: pointer;
+        z-index: 12;
+    }
+    
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        transition: all 0.3s ease;
+        z-index: 12;
+    }
+    
+    .logo img{
+        height: 50px;
+    }
+    
+    
+    /* 반응형 스타일링 */
+    @media screen and (max-width: 430px) {
+  
+        .cursor{
+            display: none;
+        }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        padding-right: 20px;
+        background-color: #141414;
+        color: #fff;
+        }
+  
+        .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 800px;
+        top: 0;
+        background-color: #141414;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        visibility: hidden;
+        z-index: 3;
+        }
+    
+        .logo img{
+            height: 50px;
+        }
+    
+    
+        .nav{
+        position: relative;
+        }
+        .nav-links li {
+        font-size: 24px;
+        opacity: 0;
+        line-height: 3;
+        }
+    
+        .burger {
+        position: absolute;
+        display: block;
+        z-index: 12;
+        margin-left: -40px;
+        margin-top: -15px;
+        }
+    }
+    
+    .nav-active {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+    
+    @keyframes navLinkFade {
+        from {
+        opacity: 0;
+        transform: translateX(50px);
+        }
+        to {
+        opacity: 1;
+        transform: translateX(0px);
+        }
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrap{
+    justify-content: center;
+    text-align: center;
+}
+
+.profile_wrap{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.proimg{
+    width: 340px;
+}
+
+.ttx{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 200px;
+}
+
+
+.prottx{
+    color: white;
+    font-size: 40px;
+}
+
+.prottx2{
+    color: white;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.tool_wrap{
+    color: white;
+    text-align: left;
+    padding-top: 60px;
+    left: -10%;
+}
+
+.tool_wrap h2{
+    margin-bottom: 15px;
+}
+
+.tool_wrap img{
+    width: 100px;
+}
+
+.reward_wrap{
+    width: 800px;
+    margin-left: 56%;
+    color: white;
+    text-align: left;
+    margin-top: -140px;
+}
+
+/* 미디어 쿼리 추가 */
+@media screen and (max-width: 430px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrap {
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_container {
+        width: 100%;
+        max-width: 412px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile_wrap {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .proimg {
+        width: 40%;
+        max-width: 340px;
+    }
+
+    .ttx {
+        text-align: left;
+        padding-top: 60px;
+        padding-left: 0;
+        margin-left: -30px;
+        font-size: 10px;
+    }
+
+    .prottx {
+        font-size: 30px;
+    }
+
+    .prottx2 {
+        text-align: left;
+        margin-top: 0px;
+    }
+
+    .tool_wrap {
+        text-align: left;
+        padding-top: 40px;
+        width: 65%;
+    }
+
+    .tool_wrap img {
+        width: 50px;
+    }
+
+    .reward_wrap {
+        width: 65%;
+        margin: 60px 0 0 0;
+        text-align: left;
+        font-size: 10px;
+    }
+
+    .reward_wrap h2, .tool_wrap h2, .prottx{
+        font-family: "League Gothic", sans-serif;
+        font-weight: 500;
+    }
+
+    .reward_wrap h2{
+        font-size: 30px;
+    }
+
+    .reward_wrap h1{
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+    .tool_wrap h2{
+        font-size: 30px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
+
+    .prottx2{
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
+
+

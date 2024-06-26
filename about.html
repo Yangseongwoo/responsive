@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="port.html">
+                <img src="image/logo.png" alt="Logo">
+            </a>
+            </div>
+            <nav>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Work</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            </nav>
+        </header>
+        
+    <div class="container">
+        <div class="wrap">
+        <div class="about_container">
+            <div class="profile_wrap">
+        <img class="proimg" src="image/profile.png" alt="">
+        <div class="ttx">
+        <h2 class="prottx">PROFILE</h2>
+        <h1 class="prottx2">저는 영상 미디어 작업과 <br>
+            UI/UX 디자인에 <br>
+            관심이 있는 디자이너 입니다.</h1>
+        </div>
+    </div>
+
+    <div class="tool_wrap">
+        <h2>TOOL</h2>
+        <img src="image/image (5) 1.png" alt="">
+        <img src="image/image (6) 1.png" alt="">
+        <img src="image/image (7) 1.png" alt="">
+        <img src="image/image (8) 1.png" alt="">
+    </div>
+
+    <div class="reward_wrap">
+        <h2>REWARDS</h2>
+        <h1>2021.07.13 핸드폰 사진 공모전 수상 <br>
+            2022.10.13 하천 사진 공모전 수상</h1>
+    </div>
+        </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+      const links = document.querySelectorAll('.nav-links li');
+      
+      
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        links.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = '';
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+          }
+        });
+        burger.classList.toggle('toggle');
+      });
+      </script>
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
