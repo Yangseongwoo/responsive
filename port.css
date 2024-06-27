@@ -2100,8 +2100,6 @@ header {
     height: 200px;
     border-radius: 10px;
     z-index: 4;
-    padding-left: 20%;
-    
   }
   
   .info-bar {
@@ -2442,6 +2440,7 @@ header {
 }
 
 }
+
 
 
   /* 반응형 스타일링 */
